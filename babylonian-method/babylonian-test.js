@@ -1,7 +1,7 @@
-const squareRoot = require('./answer')
+const squareRoot = require('./babylonian')
 const test = require('tape')
 
-test('it calculates an integer square root', assert => {
+test.skip('it calculates an integer square root', assert => {
   const radicand = 16
   const actual = squareRoot(radicand)
   const expected = 4
@@ -10,7 +10,7 @@ test('it calculates an integer square root', assert => {
   assert.end()
 })
 
-test('it calculates a decimal square root', assert => {
+test.skip('it calculates a decimal square root', assert => {
   const radicand = 423432.342423
   const actual = squareRoot(radicand)
   const expected = 650.7167912563806
@@ -20,7 +20,7 @@ test('it calculates a decimal square root', assert => {
   assert.end()
 })
 
-test('it produces synonymous results with JS native Math.sqrt fn', assert => {
+test.skip('it produces synonymous results with JS native Math.sqrt fn', assert => {
   const radicand = 423432.342423
   const actual = squareRoot(radicand)
   const expected = Math.sqrt(radicand)
@@ -30,7 +30,7 @@ test('it produces synonymous results with JS native Math.sqrt fn', assert => {
   assert.end()
 })
 
-test('it calculates infinite fraction square roots', assert => {
+test.skip('it calculates infinite fraction square roots', assert => {
   const radicand = 10
   const actual = squareRoot(radicand)
   const expected = 3.162277660168379
@@ -40,7 +40,7 @@ test('it calculates infinite fraction square roots', assert => {
   assert.end()
 })
 
-test('it returns NaN if a negative value is passed as the radicand', assert => {
+test.skip('it returns NaN if a negative value is passed as the radicand', assert => {
   const negativeRadicand = -10
   const actual = squareRoot(negativeRadicand)
 
@@ -49,7 +49,7 @@ test('it returns NaN if a negative value is passed as the radicand', assert => {
   assert.end()
 })
 
-test('it returns NaN if a non-number is passed as the radicand', assert => {
+test.skip('it returns NaN if a non-number is passed as the radicand', assert => {
   const stringRadicand = 'some string'
   const actual = squareRoot(stringRadicand)
 
@@ -58,7 +58,7 @@ test('it returns NaN if a non-number is passed as the radicand', assert => {
   assert.end()
 })
 
-test('it returns NaN if NaN is passed as the radicand', assert => {
+test.skip('it returns NaN if NaN is passed as the radicand', assert => {
   const nanRadicand = NaN
   const actual = squareRoot(nanRadicand)
 
